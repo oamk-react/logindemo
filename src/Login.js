@@ -28,6 +28,7 @@ export default function Login({setUser}) {
 
     if (response.ok) {
       setUser(json);
+      sessionStorage.setItem("user",json);
       history.push('/');
     } else {
       alert("Error logging in.");

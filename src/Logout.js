@@ -13,6 +13,7 @@ export default function Logout({setUser}) {
       try {
         await fetch(url,config);
         setUser(null);
+        sessionStorage.clear();
       } catch (error) {
         alert(error);
       }
